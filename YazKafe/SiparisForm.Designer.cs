@@ -64,6 +64,7 @@
             this.btnSiparisIptal.TabIndex = 1;
             this.btnSiparisIptal.Text = "SİPARİŞ İPTAL ";
             this.btnSiparisIptal.UseVisualStyleBackColor = false;
+            this.btnSiparisIptal.Click += new System.EventHandler(this.btnSiparisIptal_Click);
             // 
             // btnOdemeAl
             // 
@@ -75,6 +76,7 @@
             this.btnOdemeAl.TabIndex = 2;
             this.btnOdemeAl.Text = "ÖDEME AL";
             this.btnOdemeAl.UseVisualStyleBackColor = false;
+            this.btnOdemeAl.Click += new System.EventHandler(this.btnOdemeAl_Click);
             // 
             // btnAnaSayfa
             // 

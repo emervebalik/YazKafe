@@ -26,12 +26,12 @@ namespace YazKafe
         }
         private void OrnekVeriEkle()
         {
-            if (db.Urunler.Count==0)
+            if (db.Urunler.Count == 0)
             {
                 db.Urunler.Add(new Urun { UrunAd = "Ayran", BirimFiyat = 3.50m });
                 db.Urunler.Add(new Urun { UrunAd = "Çay", BirimFiyat = 4.00m });
             }
-          
+
         }
         private void MasalariOlustur()
         {
@@ -53,8 +53,8 @@ namespace YazKafe
                 lvwMasalar.Items.Add(lvi);
                 lvi.ImageKey = db.MasaDoluMu(masaNo) ? "dolu" : "bos";
                 lvi.Tag = masaNo;
-            
-            } 
+
+            }
             #endregion
         }
         private void lvwMasalar_DoubleClick(object sender, EventArgs e)
@@ -62,14 +62,19 @@ namespace YazKafe
             ListViewItem tiklanan = lvwMasalar.SelectedItems[0];
             int masaNo = (int)tiklanan.Tag;
             Siparis siparis = db.SiparisBul(masaNo);
-            if(siparis == null)
+            if (siparis == null)
             {
                 siparis = new Siparis(masaNo);
                 db.AktifSiparisler.Add(siparis);
                 tiklanan.ImageKey = "dolu";
             }
-            SiparisForm siparisForm = new SiparisForm(db,siparis);
+            SiparisForm siparisForm = new SiparisForm(db, siparis);
             siparisForm.ShowDialog();
+
+            if (siparis.Durum != SiparisDurum.Aktif)
+            {
+                tiklanan.ImageKey = "bos";
+            }
         }
 
         private void VerileriYaz()
@@ -88,7 +93,7 @@ namespace YazKafe
             catch (Exception)
             {
                 db = new KafeVeri();
-            
+
             }
             OrnekVeriEkle();
         }
