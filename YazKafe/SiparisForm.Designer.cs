@@ -40,6 +40,9 @@
             this.btnSiparisDetayEkle = new System.Windows.Forms.Button();
             this.cboUrunler = new System.Windows.Forms.ComboBox();
             this.nudUrunAdet = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cboMasaNolar = new System.Windows.Forms.ComboBox();
+            this.btnMasaTasi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSiparisDetaylar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudUrunAdet)).BeginInit();
             this.SuspendLayout();
@@ -95,9 +98,9 @@
             this.lblMasaNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblMasaNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblMasaNo.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblMasaNo.Location = new System.Drawing.Point(492, 52);
+            this.lblMasaNo.Location = new System.Drawing.Point(514, 89);
             this.lblMasaNo.Name = "lblMasaNo";
-            this.lblMasaNo.Size = new System.Drawing.Size(202, 162);
+            this.lblMasaNo.Size = new System.Drawing.Size(165, 125);
             this.lblMasaNo.TabIndex = 4;
             this.lblMasaNo.Text = "01";
             this.lblMasaNo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -176,11 +179,42 @@
             0,
             0});
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(511, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Masa No:";
+            // 
+            // cboMasaNolar
+            // 
+            this.cboMasaNolar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMasaNolar.FormattingEnabled = true;
+            this.cboMasaNolar.Location = new System.Drawing.Point(514, 36);
+            this.cboMasaNolar.Name = "cboMasaNolar";
+            this.cboMasaNolar.Size = new System.Drawing.Size(111, 21);
+            this.cboMasaNolar.TabIndex = 13;
+            // 
+            // btnMasaTasi
+            // 
+            this.btnMasaTasi.Location = new System.Drawing.Point(631, 34);
+            this.btnMasaTasi.Name = "btnMasaTasi";
+            this.btnMasaTasi.Size = new System.Drawing.Size(75, 23);
+            this.btnMasaTasi.TabIndex = 14;
+            this.btnMasaTasi.Text = "TAŞI";
+            this.btnMasaTasi.UseVisualStyleBackColor = true;
+            this.btnMasaTasi.Click += new System.EventHandler(this.btnMasaTasi_Click);
+            // 
             // SiparisForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(752, 401);
+            this.Controls.Add(this.btnMasaTasi);
+            this.Controls.Add(this.cboMasaNolar);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.nudUrunAdet);
             this.Controls.Add(this.cboUrunler);
             this.Controls.Add(this.btnSiparisDetayEkle);
@@ -216,5 +250,8 @@
         private System.Windows.Forms.Button btnSiparisDetayEkle;
         private System.Windows.Forms.ComboBox cboUrunler;
         private System.Windows.Forms.NumericUpDown nudUrunAdet;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cboMasaNolar;
+        private System.Windows.Forms.Button btnMasaTasi;
     }
 }
