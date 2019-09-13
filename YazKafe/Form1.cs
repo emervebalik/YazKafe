@@ -17,7 +17,7 @@ namespace YazKafe
     public partial class Form1 : Form
     {
         int masaAdet = 20;
-        KafeVeri db;
+        KafeVeri db; //YORUM
         public Form1()
         {
             VerileriOku();
