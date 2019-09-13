@@ -69,7 +69,7 @@ namespace YazKafe
                 tiklanan.ImageKey = "dolu";
             }
             SiparisForm siparisForm = new SiparisForm(db,siparis);
-            siparisForm.Show();
+            siparisForm.ShowDialog();
         }
 
         private void VerileriYaz()
